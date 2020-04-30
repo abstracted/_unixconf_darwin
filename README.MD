@@ -4,8 +4,8 @@ Simple [Ansible](https://www.ansible.com/) playbook to do the intial setup of my
 
 # What does it do?
 - Adds brew
-- Adds brew repos
--Adds brew packages
+- Adds brew repos/taps
+- Adds brew packages
 - Adds brew cask packages
 - Adds brew cask fonts
 - Adds npm packages
