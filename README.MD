@@ -1,6 +1,6 @@
 # Easy OSX Configurator
 
-Simple [Ansible](https://www.ansible.com/) playbook to configure preffered osx workstation.
+Simple [Ansible](https://www.ansible.com/) playbook to configure my preffered osx workstation.
 
 # What does it do?
 - Adds brew
@@ -14,8 +14,8 @@ Simple [Ansible](https://www.ansible.com/) playbook to configure preffered osx w
 - Configure the systemname hostname ... ect
 - Configures osx_defaults such as com.apple.foobar
 - Configures system services (brew and launchctl)
-- Adds users and optionally 
-- Configures dotfiles if git repo is specified
+- Adds users
+- Configures dotfiles for users using `stow`
 - Configures docker-machine
 
 ## Configuration 
