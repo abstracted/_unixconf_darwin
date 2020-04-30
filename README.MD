@@ -1,4 +1,4 @@
-# OSX Workstation
+# Easy OSX Configurator
 
 Simple [Ansible](https://www.ansible.com/) playbook to do the intial setup of my preffered workstation environment.
 
