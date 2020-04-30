@@ -1,0 +1,15 @@
+---
+- name: Check if items in packages_npm are already installed
+  raw: >
+    npm -g ls {{ packages_npm | join(" ") }} | grep "(empty)"
+  register: packages_npm_missing
+  ignore_errors: yes
+
+- name: Install npm packages
+  npm:
+    name: "{{ item }}"
+    state: present
+    global: yes
+  with_items: "{{ packages_npm }}"
+  when: packages_npm | length > 0 and packages_npm_missing.rc == 0
+  become: yes

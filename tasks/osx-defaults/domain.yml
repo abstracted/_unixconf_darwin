@@ -1,0 +1,5 @@
+---
+- include: options.yml
+  loop_control:
+    loop_var: option
+  with_items: "{{ default.options }}"

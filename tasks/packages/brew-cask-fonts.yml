@@ -1,0 +1,6 @@
+---
+- name: "Brew Cask Font Install: font-{{ item }}"
+  homebrew_cask:
+    update_homebrew: no
+    name: "{{ item }}"
+    state: latest

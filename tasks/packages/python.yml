@@ -1,0 +1,9 @@
+---
+- name: Install python packages
+  pip:
+    name: "{{ item }}"
+    state: latest
+    executable: pip3
+  with_items: "{{ packages_python }}"
+  when: packages_python | length > 0
+  become: yes

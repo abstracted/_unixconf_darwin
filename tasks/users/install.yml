@@ -1,0 +1,9 @@
+---
+- name: "Ensure {{ user.name }} is created and update if necessary"
+  user:
+    name: "{{ user.name }}"
+    shell: "{{ user.shell }}"
+    update_password: on_create
+    append: yes
+  become: yes
+

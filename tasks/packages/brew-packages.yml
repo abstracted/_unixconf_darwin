@@ -1,0 +1,6 @@
+---
+- name: "Brew Install: {{ item }}"
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+    update_homebrew: no

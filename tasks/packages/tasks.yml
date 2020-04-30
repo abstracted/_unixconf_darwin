@@ -1,0 +1,12 @@
+---
+- name: BREW
+  include: brew.yml
+
+- name: NPM
+  include: node.yml
+
+- name: PYTHON
+  include: python.yml
+
+- name: RUST
+  include: rust.yml

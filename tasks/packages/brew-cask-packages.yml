@@ -1,0 +1,7 @@
+---
+- name: "Brew Cask Install: {{ item }}"
+  homebrew_cask:
+    update_homebrew: no
+    name: "{{ item }}"
+    state: latest
+    accept_external_apps: yes

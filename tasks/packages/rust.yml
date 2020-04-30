@@ -1,0 +1,14 @@
+---
+# - name: Check if rust is installed
+#   raw: which rustc
+#   register: rustc_installed
+#   ignore_errors: yes
+
+# - name: Install rustup & rust
+#   raw: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+#   when: rustc_installed.rc != 0
+
+- name: Install rust packages
+  command: "cargo install {{ item }}"
+  with_items: "{{ packages_rust }}"
+  when: packages_rust | length > 0

@@ -1,0 +1,7 @@
+---
+- include: system-name.yml
+
+- include: domain.yml
+  loop_control:
+    loop_var: default
+  with_items: "{{ osx_defaults }}"

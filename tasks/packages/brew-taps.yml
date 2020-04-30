@@ -1,0 +1,9 @@
+---
+- name: Check if "{{ item }}" has been tapped
+  raw: brew tap-info "{{ item }}" | grep "Not installed"
+  register: brew_tap
+  ignore_errors: yes
+
+- name: "Tap {{ item }}"
+  command: "brew tap {{ item }}"
+  when: brew_tap.rc == 0

@@ -1,0 +1,8 @@
+---
+- name: "Manage Brew Services"
+  command: "brew services {{ item.command }} {{ item.name }}"
+  with_items: "{{ services.brew }}"
+
+- name: "Manage LaunchCTL Services"
+  command: "launchctl {{ item.command }} {{ item.name }}"
+  with_items: "{{ services.launchctl }}"

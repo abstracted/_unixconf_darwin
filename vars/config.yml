@@ -1,0 +1,252 @@
+computername: darwinworkstation
+hostname: darwinworkstation
+localhostname: darwinworkstation
+netbiosname: darwinworkstation
+
+users:
+  - tag: main
+    name: cameron
+    fullname: "Cameron Sanders"
+    email: csanders@protonmail.com
+    shell: /bin/zsh
+    dotfiles: git@gitlab.com:abstracted1/_unixconf_dotfiles.git
+
+osx_defaults:
+# https://docs.ansible.com/ansible/latest/modules/osx_defaults_module.html
+  - domain: com.apple.LaunchServices
+    options: 
+      - key: LSQuarantine
+        value: false
+        type: bool
+  - domain: NSGlobalDomain
+    options:
+      - key: AppleMeasurementUnits
+        value: Inches
+        type: string
+      - key: AppleTemperatureUnit
+        value: Fahrenheit
+        type: string
+  - domain: /Library/Preferences/com.apple.alf
+    options:
+      - key: stealthenabled
+        value: 1
+        type: int
+      - key: loggingenabled
+        value: 1
+        type: int
+  - domain: com.apple.dock
+    options:
+      - key: autohide
+        value: true
+        type: bool
+      - key: autohide-delay
+        value: 0.00
+        type: float
+      - key: autohide-time-modifier
+        value: 0.00
+        type: float
+      - key: expose-animation-duration
+        value: 0.00
+        type: float
+      - key: minimize-to-application
+        value: true
+        type: bool
+      - key: mru-spaces
+        value: false
+        type: bool
+      - key: tilesize
+        value: 32
+        type: float
+  - domain: com.apple.finder
+    options:
+      - key: AppleShowAllExtensions
+        value: true
+        type: bool
+      - key: FXEnableExtensionChangeWarning
+        value: false
+        type: bool
+      - key: QuitMenuItem
+        type: bool
+        value: true
+      - key: _FXShowPosixPathInTitle
+        value: true
+        type: bool
+  - domain: com.apple.spaces
+    options:
+      - key: spans-displays
+        value: false
+        type: bool
+
+services:
+  brew:
+    - name: skhd
+      command: restart
+    - name: yabai
+      command: restart
+  launchctl: []
+
+packages_brew_taps:
+  - koekeishiya/formulae
+  - homebrew/cask-fonts
+  - homebrew/services
+
+packages_brew:
+  # misc
+  - coreutils
+  - findutils
+  - htop
+  - lazygit
+  - lsof
+  - parallel
+  - rsync
+  - stow
+  - pandoc
+  # codec
+  - ffmpeg
+  - imagemagick
+  - librsvg
+  - optipng
+  - gstreamer
+  - gst-plugins-base
+  - gst-plugins-good
+  - gst-plugins-bad
+  - gst-plugins-ugly
+  # download
+  - curl
+  - lftp
+  - wget
+  # archives
+  - p7zip
+  - unrar
+  - unzip
+  - zip
+  # network utils
+  - iftop
+  - inetutils
+  - nmap
+  - speedtest-cli
+  - tcpdump
+  # shell fun
+  - asciiquarium
+  - cmatrix
+  - cowsay
+  - figlet
+  - neofetch
+  - pipes-sh
+  - ranger
+  - w3m
+  # zsh modules
+  - zsh-autosuggestions
+  - zsh-completions
+  - zsh-history-substring-search
+  - zsh-syntax-highlighting
+  # development
+  - git
+  - node
+  - python
+  - rust
+  - gcc
+  - cmake
+    # - rust # installed via packages/rust.yml
+  # vim
+  - neovim
+  # yabai
+  - skhd
+  - yabai
+
+packages_brew_cask:
+  # misc
+  - xquartz # should be installed first as others will fail if not installed
+  - balenaetcher
+  - focus
+  - geekbench
+  - qbittorrent
+  - syncthing
+  - the-unarchiver
+  # creative
+  - bitwig-studio
+  - blender
+  - darktable
+  - gimp
+  - handbrake
+  - inkscape
+  - krita
+  - musescore
+  - obs
+  # development
+  - dash
+  - iterm2
+  - kitty
+  - typora
+  - vscodium
+  # web
+  - chromium
+  - firefox
+  # social
+  - discord
+  - rambox
+  - qtox
+  # networking
+  - charles
+  - little-snitch
+  - protonvpn
+  - wireshark
+  - zenmap
+  # office
+  - calibre
+  - libreoffice
+  - protonmail-bridge
+  # multimedia
+  - moom
+  - musicbrainz-picard
+  - spotify
+  - vlc
+  - xnviewmp
+  # gaming
+  # - steam
+  # - retroarch
+
+packages_brew_cask_fonts:
+# https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks
+  - font-tex-gyre-bonum
+  - font-tex-gyre-bonum-math
+  - font-tex-gyre-chorus
+  - font-tex-gyre-cursor
+  - font-tex-gyre-heros
+  - font-tex-gyre-pagella
+  - font-tex-gyre-pagella-math
+  - font-tex-gyre-schola
+  - font-tex-gyre-schola-math
+  - font-tex-gyre-termes
+  - font-tex-gyre-termes-math
+  - font-tex-gyre-adventor
+  - font-dejavu
+  - font-fantasque-sans-mono
+  - font-fantasquesansmono-nerd-font
+  - font-fira-code
+  - font-fira-sans
+  - font-firacode-nerd-font
+  - font-gnu-unifont
+  - font-liberation-sans
+  - font-noto-color-emoji
+  - font-noto-mono
+  - font-noto-sans
+  - font-ubuntu
+  - font-victor-mono
+
+packages_npm:
+  - nodemon
+  - standard
+  - eslint
+  - "@babel/core"
+  - "@babel/preset-env"
+
+packages_rust:
+  - starship
+  - exa
+
+packages_python:
+  - pywal
+  - youtube-dl
+  - glances
+  - ascii-art-cli

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+which ansible || pip3 install ansible --quiet
+which ansible && ansible-playbook --ask-become-pass playbook.yml

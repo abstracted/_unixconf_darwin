@@ -1,0 +1,16 @@
+- name: "Set {{ option.key }} to {{ option.value }} on {{ default.domain }} for root user."
+  osx_defaults:
+    domain: "{{ default.domain }}"
+    key: "{{ option.key }}"
+    type: "{{ option.type }}"
+    value: "{{ option.value }}"
+    state: "{{ option.state | default('present') }}"
+  become: yes
+
+- name: "Set {{ option.key }} to {{ option.value }} on {{ default.domain }} for normal user"
+  osx_defaults:
+    domain: "{{ default.domain }}"
+    key: "{{ option.key }}"
+    type: "{{ option.type }}"
+    value: "{{ option.value }}"
+    state: "{{ option.state | default('present') }}"
