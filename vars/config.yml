@@ -147,7 +147,6 @@ packages_brew:
   - rust
   - gcc
   - cmake
-    # - rust # installed via packages/rust.yml
   # vim
   - neovim
   # yabai
