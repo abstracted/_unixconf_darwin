@@ -178,6 +178,7 @@ packages_brew_cask:
   - kitty
   - typora
   - vscodium
+  - clion
   # web
   - chromium
   - firefox
