@@ -148,8 +148,6 @@ packages_brew:
   - gcc
   - cmake
   - gdb
-    # - rust # installed via packages/rust.yml
-  # vim
   - neovim
   # yabai
   - skhd
