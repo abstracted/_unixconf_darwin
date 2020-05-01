@@ -162,6 +162,7 @@ packages_brew_cask:
   - qbittorrent
   - syncthing
   - the-unarchiver
+  - flux
   # creative
   - bitwig-studio
   - blender
