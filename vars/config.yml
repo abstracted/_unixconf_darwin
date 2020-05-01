@@ -178,7 +178,7 @@ packages_brew_cask:
   - iterm2
   - kitty
   - typora
-  - vscodium
+  - homebrew/cask-versions/visual-studio-code-insiders
   # web
   - chromium
   - firefox
