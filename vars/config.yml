@@ -87,11 +87,11 @@ osx_defaults:
   #           "KeyboardLayout Name": "Unicode Hex Input"
 
 services:
-  brew:
-    - name: skhd
-      command: restart
-    - name: yabai
-      command: restart
+  brew: []
+    # - name: skhd
+    #   command: restart
+    # - name: yabai
+    #   command: restart
   launchctl: []
 
 packages_brew_taps:
@@ -259,3 +259,4 @@ packages_python:
   - youtube-dl
   - glances
   - ascii-art-cli
+  - pynvim
