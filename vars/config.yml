@@ -245,11 +245,17 @@ packages_brew_cask_fonts:
   - font-victor-mono
 
 packages_npm:
+  - "@babel/core"
+  - "@babel/preset-env"
   - nodemon
   - standard
   - eslint
-  - "@babel/core"
-  - "@babel/preset-env"
+  - remark
+  - remark-cli
+  - remark-stringify
+  - remark-frontmatter
+  - wcwidth
+  - prettier
 
 packages_rust:
   - starship
