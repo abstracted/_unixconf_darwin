@@ -189,6 +189,8 @@ packages_brew_cask:
   - kitty
   - typora
   - vscodium
+  - clion
+  - webstorm
   # web
   - chromium
   - firefox
@@ -256,6 +258,7 @@ packages_npm:
   - remark-frontmatter
   - wcwidth
   - prettier
+  - js-beautify
 
 packages_rust:
   - starship
