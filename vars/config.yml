@@ -76,7 +76,8 @@ osx_defaults:
       - key: spans-displays
         value: false
         type: bool
-  # TODO: Fix this at some point
+       
+  # TODO: Automatically add Unicode Hex Input at some point
   # - domain: /Library/Preferences/com.apple.HIToolbox
   #   options:
   #     - key: AppleEnabledInputSources
