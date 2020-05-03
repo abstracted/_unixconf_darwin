@@ -76,6 +76,15 @@ osx_defaults:
       - key: spans-displays
         value: false
         type: bool
+  # TODO: Fix this at some point
+  # - domain: /Library/Preferences/com.apple.HIToolbox
+  #   options:
+  #     - key: AppleEnabledInputSources
+  #       type: array
+  #       value:
+  #         - "InputSourceKind": "Keyboard Layout"
+  #           "KeyboardLayout ID": 1
+  #           "KeyboardLayout Name": "Unicode Hex Input"
 
 services:
   brew:
@@ -178,7 +187,7 @@ packages_brew_cask:
   - iterm2
   - kitty
   - typora
-  - homebrew/cask-versions/visual-studio-code-insiders
+  - vscodium
   # web
   - chromium
   - firefox
