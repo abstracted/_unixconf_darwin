@@ -188,7 +188,7 @@ packages_brew_cask:
   - iterm2
   - kitty
   - typora
-  # - vscodium
+  - vscodium
   - clion
   - webstorm
   # web
