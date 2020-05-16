@@ -187,7 +187,7 @@ packages_brew_cask:
   - dash
   - iterm2
   - kitty
-  - typora
+  - mark-text
   - vscodium
   - clion
   - webstorm
