@@ -9,7 +9,7 @@
     - docker-toolbox
 
 - name: Check if docker-machine instance already running in virtualbox
-  command: docker-machine ls | grep default | grep virtualbox
+  raw: docker-machine ls | grep default | grep virtualbox
   register: docker_machine_state
   ignore_errors: yes
 
