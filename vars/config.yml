@@ -9,7 +9,7 @@ users:
     fullname: "Cameron Sanders"
     email: csanders@protonmail.com
     shell: /bin/zsh
-    dotfiles: git@gitlab.com:abstracted1/_unixconf_dotfiles.git
+    dotfiles: git@github.com:abstracted/_unixconf_dotfiles.git
 
 osx_defaults:
 # https://docs.ansible.com/ansible/latest/modules/osx_defaults_module.html
@@ -237,10 +237,8 @@ packages_brew_cask_fonts:
   - font-fantasquesansmono-nerd-font
   - font-fira-code
   - font-fira-sans
-  - font-firacode-nerd-font
+  - font-fira-code-nerd-font
   - font-gnu-unifont
-  - font-liberation-sans
-  - font-noto-color-emoji
   - font-noto-mono
   - font-noto-sans
   - font-ubuntu
