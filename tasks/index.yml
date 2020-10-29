@@ -1,6 +1,5 @@
 ---
 - include: packages/tasks.yml
-- include: docker/tasks.yml
 - include: osx-defaults/tasks.yml
 - include: users/tasks.yml
 - include: services/tasks.yml
