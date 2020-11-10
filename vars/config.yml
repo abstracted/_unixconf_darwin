@@ -189,15 +189,11 @@ packages_brew_cask:
   - kitty
   - mark-text
   - vscodium
-  - clion
-  - webstorm
   # web
   - chromium
   - firefox
   # social
   - discord
-  - rambox
-  - qtox
   # networking
   - charles
   - little-snitch
@@ -210,13 +206,9 @@ packages_brew_cask:
   - protonmail-bridge
   # multimedia
   - moom
-  - musicbrainz-picard
   - spotify
   - vlc
   - xnviewmp
-  # gaming
-  # - steam
-  # - retroarch
 
 packages_brew_cask_fonts:
 # https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks
