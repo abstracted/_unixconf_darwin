@@ -258,5 +258,4 @@ packages_python:
   - pywal
   - youtube-dl
   - glances
-  - ascii-art-cli
   - pynvim

@@ -18,51 +18,15 @@
   with_items: "{{ packages_brew_taps }}"
   when: packages_brew_taps | length > 0
 
-- name: Get a list of needed brew packages 
-  raw: "cd /usr/local/Cellar ; ls {{ packages_brew | join(' ') }} 2>&1 > /dev/null | grep -i 'No such file or directory' | cut -d':' -f 2 | sed -e 's/^ //'"
-  register: packages_brew_needed
-
-- name: Update packages_brew list with needed packages only
-  set_fact:
-    packages_brew: "{{ packages_brew_needed.stdout_lines }}"
-
-- name: The following brew packages will be installed
-  debug:
-    var: packages_brew
-
 - name: Install brew packages
   include: brew-packages.yml
   with_items: "{{ packages_brew }}"
   when: packages_brew | length > 0
 
-- name: Get a list of needed brew cask packages 
-  raw: "cd /usr/local/Caskroom ; ls {{ packages_brew_cask | join(' ') }} 2>&1 > /dev/null | grep -i 'No such file or directory' | cut -d':' -f 2 | sed -e 's/^ //'"
-  register: packages_brew_cask_needed
-
-- name: Update packages_brew_cask list with needed packages only
-  set_fact:
-    packages_brew_cask: "{{ packages_brew_cask_needed.stdout_lines }}"
-
-- name: The following brew cask packages will be installed
-  debug:
-    var: packages_brew_cask
-
 - name: Install brew cask packages
   include: brew-cask-packages.yml
   with_items: "{{ packages_brew_cask }}"
   when: packages_brew_cask | length > 0
-
-- name: Get a list of needed brew cask fonts
-  raw: "cd /usr/local/Caskroom ; ls {{ packages_brew_cask_fonts | join(' ') }} 2>&1 > /dev/null | grep -i 'No such file or directory' | cut -d':' -f 2 | sed -e 's/^ //'"
-  register: packages_brew_cask_fonts_needed
-
-- name: Update packages_brew_cask_fonts list with needed packages only
-  set_fact:
-    packages_brew_cask_fonts: "{{ packages_brew_cask_fonts_needed.stdout_lines }}"
-
-- name: The following brew cask fonts will be installed
-  debug:
-    var: packages_brew_cask_fonts
 
 - name: Install brew cask fonts
   include: brew-cask-fonts.yml
