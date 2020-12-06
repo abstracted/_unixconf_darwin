@@ -173,6 +173,7 @@ packages_brew_cask:
   - syncthing
   - the-unarchiver
   - flux
+  - nextcloud
   # creative
   - bitwig-studio
   - blender
