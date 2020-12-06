@@ -4,3 +4,4 @@
     update_homebrew: no
     name: "{{ item }}"
     state: latest
+  when: item not in brew_cask_installed.stdout_lines

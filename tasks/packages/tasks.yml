@@ -2,6 +2,8 @@
 - name: BREW
   include: brew.yml
 
+# Brew installs the following package managers so brew task must precede the following.
+
 - name: NPM
   include: node.yml
 

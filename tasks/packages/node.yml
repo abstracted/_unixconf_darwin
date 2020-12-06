@@ -1,9 +1,14 @@
 ---
+- name: Get a list of installed npm packges
+  raw: npm -g list | tail -n +2 | cut -d" " -f2 | sed -E 's/@[0-9]+\..*$//g'
+  register: npm_installed
+  become: no
+
 - name: Install npm packages
   npm:
     name: "{{ item }}"
     state: present
     global: yes
   with_items: "{{ packages_npm }}"
-  when: packages_npm | length > 0
+  when: packages_npm | length > 0 and item not in npm_installed.stdout_lines
   become: yes

@@ -18,6 +18,16 @@
   with_items: "{{ packages_brew_taps }}"
   when: packages_brew_taps | length > 0
 
+- name: Get a list of installed brew forumla packages
+  raw: brew list --formula | tr " " "\n"
+  register: brew_formula_installed
+  become: no
+
+- name: Get a list of installed brew cask packages
+  raw: brew list --cask | tr " " "\n"
+  register: brew_cask_installed
+  become: no
+
 - name: Install brew packages
   include: brew-packages.yml
   with_items: "{{ packages_brew }}"

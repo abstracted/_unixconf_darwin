@@ -4,3 +4,4 @@
     name: "{{ item }}"
     state: latest
     update_homebrew: no
+  when: item not in brew_formula_installed.stdout_lines

@@ -8,7 +8,12 @@
 #   raw: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 #   when: rustc_installed.rc != 0
 
+- name: Get a list of installed cargo packges
+  raw: cargo install --list | grep -E "v\d\..*:$" | cut -d" " -f1
+  register: cargo_installed
+  become: no
+
 - name: Install rust packages
   command: "cargo install {{ item }}"
   with_items: "{{ packages_rust }}"
-  when: packages_rust | length > 0
+  when: packages_rust | length > 0 and item not in cargo_installed.stdout_lines

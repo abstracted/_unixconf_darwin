@@ -5,3 +5,4 @@
     name: "{{ item }}"
     state: latest
     accept_external_apps: yes
+  when: item not in brew_cask_installed.stdout_lines

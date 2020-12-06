@@ -172,7 +172,6 @@ packages_brew_cask:
   - qbittorrent
   - syncthing
   - the-unarchiver
-  # - flux
   - nextcloud
   # creative
   - bitwig-studio
@@ -187,10 +186,10 @@ packages_brew_cask:
   # development
   - dash
   - iterm2
-  - kitty
   - mark-text
   - vscodium
   # web
+  - brave-browser-beta
   - chromium
   - firefox
   # social
@@ -260,3 +259,4 @@ packages_python:
   - youtube-dl
   - glances
   - pynvim
+  - colorz
