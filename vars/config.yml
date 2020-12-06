@@ -172,7 +172,7 @@ packages_brew_cask:
   - qbittorrent
   - syncthing
   - the-unarchiver
-  - flux
+  # - flux
   - nextcloud
   # creative
   - bitwig-studio
