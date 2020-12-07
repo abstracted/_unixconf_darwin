@@ -226,7 +226,7 @@ packages_brew_cask_fonts:
   - font-tex-gyre-adventor
   - font-dejavu
   - font-fantasque-sans-mono
-  - font-fantasquesansmono-nerd-font
+  - font-fantasque-sans-mono-nerd-font
   - font-fira-code
   - font-fira-sans
   - font-fira-code-nerd-font
