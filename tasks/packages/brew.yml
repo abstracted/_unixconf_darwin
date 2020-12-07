@@ -19,12 +19,12 @@
   when: packages_brew_taps | length > 0
 
 - name: Get a list of installed brew forumla packages
-  raw: brew list --formula | tr " " "\n"
+  raw: brew list --formula | tr " " "\n" | sed -E 's/@[0-9]+\..*$//g'
   register: brew_formula_installed
   become: no
 
 - name: Get a list of installed brew cask packages
-  raw: brew list --cask | tr " " "\n"
+  raw: brew list --cask | tr " " "\n" | sed -E 's/@[0-9]+\..*$//g'
   register: brew_cask_installed
   become: no
 
