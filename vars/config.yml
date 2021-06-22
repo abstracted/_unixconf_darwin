@@ -75,7 +75,7 @@ osx_defaults:
   - domain: com.apple.spaces
     options:
       - key: spans-displays
-        value: true
+        value: false
         type: bool
        
   # TODO: Automatically add Unicode Hex Input at some point
