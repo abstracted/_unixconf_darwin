@@ -13,6 +13,7 @@ users:
 
 osx_defaults:
 # https://docs.ansible.com/ansible/latest/modules/osx_defaults_module.html
+# https://macos-defaults.com/
   - domain: com.apple.LaunchServices
     options: 
       - key: LSQuarantine
@@ -74,7 +75,7 @@ osx_defaults:
   - domain: com.apple.spaces
     options:
       - key: spans-displays
-        value: false
+        value: true
         type: bool
        
   # TODO: Automatically add Unicode Hex Input at some point
@@ -88,16 +89,15 @@ osx_defaults:
   #           "KeyboardLayout Name": "Unicode Hex Input"
 
 services:
-  brew: []
-    # - name: skhd
-    #   command: restart
-    # - name: yabai
-    #   command: restart
+  brew: 
+    - name: skhd
+      command: restart
+    - name: yabai
+      command: restart
   launchctl: []
 
 packages_brew_taps:
-  # - koekeishiya/formulae
-  - sergeycherepanov/docker-virtualbox
+  - koekeishiya/formulae
   - homebrew/cask-fonts
   - homebrew/services
 
@@ -160,8 +160,8 @@ packages_brew:
   - cmake
   - gdb
   - neovim
-  # - skhd
-  # - yabai
+  - skhd
+  - yabai
 
 packages_brew_cask:
   # misc
@@ -190,7 +190,6 @@ packages_brew_cask:
   - mark-text
   - vscodium
   - virtualbox
-  - docker-virtualbox
   # web
   - brave-browser
   - chromium
